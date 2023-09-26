@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion in Array</title>
+    <script>
+        // Making array & Defining position
+
+        // let data = [60,30,8,12,2,80,55]
+        // let newEl = 105;
+        // let position = 2;
+        // console.log(data);
+
+        // for(let i=data.length;i>=0;i--)
+        // {
+        //     if(i>= position)
+        //     {
+        //         data[i+1] = data[i];
+        //         if(i== position)
+        //         {
+        //             data[i] = newEl;
+        //         }
+        //     }
+        // }
+        // console.log(data);
+
+
+            //  Taking dynamic postion & values with input boxes and button. 
+
+        function insertEl() {
+
+            let data = [65, 32, 22, 85, 1, 13]
+            let newEl = document.getElementById('elNew').value;
+            newEl= parseInt(newEl)
+            let position = document.getElementById('pos').value;
+            console.log(data);
+
+            // Using by default function
+            // data.splice(2,0,1000);
+
+            
+            for (let i = data.length; i >= 0; i--) {
+                if (i >= position) {
+                    data[i + 1] = data[i];
+
+                    data[i] = newEl;
+
+                }
+            }
+            console.log(data);
+        }
+        
+
+        
+       
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="pos"  placeholder="Enter position" />
+    <input type="text" id="elNew" placeholder="Enter new element" />
+    <button onclick="insertEl()">Insert </button>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deletinfg Element</title>
+    <script>
+
+                // Making array & Defining position
+
+
+        // let data = [10,23,45,5,8,20];
+        // let position = 3;
+        // for(let i= position; i<=data.length-1;i++){
+        //     data[i] = data[i+1];
+        // }
+        // data.length = data.length -1;  //to avoid reptition of last array element.
+        // console.log(data);
+
+
+         //  Taking dynamic postion &  deleting value with input boxe and button. 
+
+
+        function removeEl() {
+
+            let data = [ 20,6,19,100,45,78,50];
+
+            let position = document.getElementById('pos').value;
+            position=parseInt(position);
+
+            for (let i = position; i <= data.length-1; i++) {
+                data[i] = data[i + 1];
+            }
+            data.length = data.length - 1;  //to avoid reptition of last array element.
+            console.log(data);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="pos" placeholder="Enter Position">
+    <button onclick="removeEl()">Remove Element</button>
+
+</body>
+
+</html>

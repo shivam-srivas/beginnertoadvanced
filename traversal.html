@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Traversal</title>
+
+    <script>
+        let data = [ 9,12,16,54,85,2,3,4,115,77,90,5]
+        
+        // Traversal
+        for(let i=0;i <data.length;i++)
+        {
+            document.write(`Array of ${i} is ${data[i]} <br>`)
+        }
+
+        // Accessing 
+        let x=10;
+        document.write(`Value of ${x}th element is : ${data[x]} <br><br> `);
+
+
+        // Accessing  On Button Click
+        function getElement()
+        {
+            let  el  = document.getElementById('element').value;
+
+            // Valdation if-else
+            if(el<data[el] && typeof parseInt(el==="number") )
+            {
+                alert(data[el]);
+
+            } 
+            else{
+                alert("Please enter valid input")
+            }
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+    <input type="text" id="element" />
+    <button onclick="getElement()"> Get Element </button>
+</body>
+</html>
