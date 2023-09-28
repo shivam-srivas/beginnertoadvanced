@@ -27,20 +27,20 @@
         // console.log(data);
 
 
-            //  Taking dynamic postion & values with input boxes and button. 
+        //  Taking dynamic postion & values with input boxes and button. 
 
         function insertEl() {
 
             let data = [65, 32, 22, 85, 1, 13]
             let newEl = document.getElementById('elNew').value;
-            newEl= parseInt(newEl)
+            newEl = parseInt(newEl)
             let position = document.getElementById('pos').value;
             console.log(data);
 
             // Using by default function
             // data.splice(2,0,1000);
 
-            
+
             for (let i = data.length; i >= 0; i--) {
                 if (i >= position) {
                     data[i + 1] = data[i];
@@ -51,16 +51,16 @@
             }
             console.log(data);
         }
-        
 
-        
-       
+
+
+
 
     </script>
 </head>
 
 <body>
-    <input type="text" id="pos"  placeholder="Enter position" />
+    <input type="text" id="pos" placeholder="Enter position" />
     <input type="text" id="elNew" placeholder="Enter new element" />
     <button onclick="insertEl()">Insert </button>
 
