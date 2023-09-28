@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merging Two Arrays</title>
+    <script>
+        //   Simple way of merging 
+        let data = [3,7,12,34,56,90];
+        let data1 = [20,30,40,50];
+        let data2 = [];
+        for(i=0;i<data.length;i++){
+            data2[i] = data[i];
+        }
+        for(i=0 ;i<data1.length;i++){
+            data2[data.length+i] = data1[i];
+        }
+        console.log(data2);
+
+        //  Array Reversal 
+        let dummy = [10,20,40,100]
+        let dummy1 = [200,300,400]
+        dummy.reverse();
+
+        let dummy2 = [...dummy,...dummy1]; // Spread Operator
+        console.log(dummy2)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
